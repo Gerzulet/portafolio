@@ -1,0 +1,76 @@
+
+#about,#contact, #skills  {
+  position: relative;
+  font-weight: 900;
+  text-transform: uppercase;
+  color:transparent; 
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+}
+  #projects::before, #about::before, #contact::before, #skills::before {
+  content: attr(data-text);
+  position:absolute; 
+  color: #fff; 
+  width: 0; 
+  overflow: hidden; 
+  filter: drop-shadow(0 0 25px #fff);
+
+}
+
+
+#projects:hover::before, #about:hover::before, #contact:hover::before, #skills:hover::before{
+  width: 100%;
+}
+
+#about {
+ animation: appear 1.0s ;
+}
+#contact {
+ animation: appear 1.5s ;
+}
+#skills {
+ animation: appear 2.0s ;
+}
+
+
+#projects {
+  position: relative;
+  text-transform: uppercase;
+  color:transparent; 
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+ animation: appearProject 4s  ;
+ font-weight: 1000;
+
+}
+
+
+@keyframes appear {
+0% {
+  opacity:0;
+}
+99% {
+  opacity:0;
+}
+100% {
+  opacity:1;
+}
+}
+
+
+@keyframes appearProject {
+0% {
+  color:red;
+  opacity:0;
+}
+80% {
+  opacity:1;
+  color:red;
+    filter:drop-shadow(0 0 35px #ff0000)
+
+}
+90% {
+  color:white;
+}
+100% {
+}
+}
+
