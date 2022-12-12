@@ -1,4 +1,4 @@
-import { BsGithub, BsLinkedin } from 'react-icons/bs' 
+import { BsGithub, BsLinkedin, BsWhatsapp } from 'react-icons/bs' 
 import germanFlag from '../Assets/germanFlag.png'
 import frenchFlag from '../Assets/frenchFlag.png'
 import spanishFlag  from '../Assets/spanishFlag.png'
@@ -26,6 +26,7 @@ export default function NavBar() {
         <ul className='flex  invisible  md:visible '>
           <li className='m-4'><a target="_blank" href="https://github.com/Gerzulet"><BsGithub color='white' size='40' /></a></li>
           <li className='m-4'><a target="_blank" href="https://linkedin.com/in/gzulet"><BsLinkedin color='white' size='40' /></a></li>
+          <li className='m-4'><a target="_blank" href="https://wa.me/+1167435985"><BsWhatsapp color='white' size='40' /></a></li>
         </ul>
           <img id='languageFlag' className='cursor-pointer h-7 md:h-9 m-4 absolute md:right-[3rem]' src={languageFlag} alt=""></img>
       </nav>
