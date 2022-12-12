@@ -6,7 +6,7 @@ import linuxLogo  from '../Assets/linuxlogo.svg'
 import gitLogo from '../Assets/gitlogo.svg'
 import tailwindLogo from '../Assets/tailwindLogo.svg'
 import bootstrapLogo from '../Assets/bootstrapLogo.svg'
-
+import nodejs from '../Assets/nodejs.svg'
 export default function Skills() {
 
 
@@ -30,6 +30,7 @@ export default function Skills() {
         <div class="flex m-8">
         <img className='h-24 mx-3 ' src={gitLogo} alt="LogoGit"/>
         <img className='h-24 mx-3 ' src={linuxLogo} alt="LogoLinux"/>
+        <img className='h-24 mx-3 ' src={nodejs} alt="LogoLinux"/>
       </div>
     </div>
   )

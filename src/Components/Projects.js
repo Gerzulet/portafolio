@@ -2,53 +2,26 @@ import './Proyects.css'
 import { useState } from 'react'
 import Swipe from 'react-easy-swipe'
 import { AiOutlineRight, AiOutlineLeft } from 'react-icons/ai'
-import noteManagerImg from '../Assets/notetakingappPreview.gif'
-import jsLogo from '../Assets/jslogo.svg'
-import reactLogo from '../Assets/reactLogo.svg'
-import tailwindLogo from '../Assets/tailwindLogo.svg'
-import bootstrapLogo from '../Assets/bootstrapLogo.svg'
 import nonResponsiveIcon from '../Assets/nonResponsiveIcon.svg'
 import responsiveIcon from '../Assets/responsiveIcon.svg'
 import previewIcon from '../Assets/previewIcon.svg'
 import githubIcon from '../Assets/githubIcon.svg'
-import landingPagePreview from '../Assets/landingPagePreview.gif'
-
+import proyectosDB from '../Data/proyectos.js'
 
 export default function Projects() {
   const [currentSlide, setCurrentSlide] = useState(0)
-  const CarouselData = [
-    {
-      'image': landingPagePreview,
-      'technologies': [tailwindLogo, reactLogo],
-      'linkGithub' : 'https://github.com/Gerzulet/landing-page',
-      'responsive' : true, 
-      'ProyectTitle' : 'Landing Page',
-    },
-    {
-      'image': 'https://thumbs.dreamstime.com/b/polar-bear-ursus-maritimus-carnivorous-bear-whose-native-range-lies-largely-arctic-circle-encompassing-115252759.jpg',
-      'technologies': [reactLogo, reactLogo]
-    },
-    {
-      'image': noteManagerImg,
-      'ProyectTitle': 'Administrador de notas',
-      'link': 'https://github.com',
-      'responsive': false,
-      'technologies': [jsLogo, bootstrapLogo],
-      'linkGithub': 'https://github.com/Gerzulet/NotesManager.github.io',
-      'linkPreview': 'https://gerzulet.github.io/NotesManager.github.io/'
-    }
-  ]
+ console.log(proyectosDB)
 
   // Funciones de carrousel
   function nextSlide() {
-    let newSlide = currentSlide === CarouselData.length - 1 ? 0 : currentSlide + 1;
+    let newSlide = currentSlide === proyectosDB.length - 1 ? 0 : currentSlide + 1;
     setCurrentSlide(newSlide)
   }
 
   function prevSlide() {
     let newSlide =
       currentSlide === 0
-        ? CarouselData.length - 1
+        ? proyectosDB.length - 1
         : currentSlide - 1;
     setCurrentSlide(newSlide)
   }
@@ -69,7 +42,7 @@ export default function Projects() {
 
 
             {/* Renderizado de carrousel */}
-            {CarouselData.map((slide, index) => {
+            {proyectosDB.map((slide, index) => {
               return (
                 <div
                   className={
@@ -96,7 +69,7 @@ export default function Projects() {
                   <div class="text-white absolute flex flex-col bottom-[30%] left-[93%]">
                     {slide.technologies.map((el, index) => {
                       return (
-                        <img className='h-12 my-2  ' key={index} src={el} alt="" />
+                        <img className='h-12 my-2  ' key={index} src={el} alt="tecnologia" />
 
                       )
                     })}
