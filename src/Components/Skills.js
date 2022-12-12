@@ -7,11 +7,14 @@ import gitLogo from '../Assets/gitlogo.svg'
 import tailwindLogo from '../Assets/tailwindLogo.svg'
 import bootstrapLogo from '../Assets/bootstrapLogo.svg'
 import nodejs from '../Assets/nodejs.svg'
-export default function Skills() {
+
+
+export default function Skills({responsiveStyle}) {
 
 
   return ( 
- <div className='flex animate-fadein font-inconsolata m-24 flex-col items-center '> 
+ <div className={`flex ${responsiveStyle} animate-fadein font-inconsolata m-24 flex-col items-center `}> 
+      
       <h2 class="text-white font-bold text-xl">Lenguages</h2>
      <div className="flex m-8">
         <img className='h-24 mx-4  ' src={htmlLogo} alt="LogoHtml"/>
