@@ -8,9 +8,7 @@ const LanguageProvider = ({ children }) => {
   function changeLanguage () {
     
     let actualLanguage = translations.findIndex(el => el === language)
-    console.log(actualLanguage)
     actualLanguage === 2 ? setLanguage(translations[0]) : setLanguage(translations[actualLanguage + 1])
-    console.log(language)
   }
 
   return <LanguageContext.Provider value={{language, changeLanguage}}>{children} </LanguageContext.Provider>
