@@ -1,5 +1,5 @@
 import './Main.css'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import About from './About'
 import Skills from './Skills'
 import Start from './Start'
@@ -10,19 +10,38 @@ import Projects from './Projects'
 export default function Main() {
 
   const [section, setSection] = useState(<Start />)
-  const [sectionResponsive, setSectionResponsive] = useState(null)
-  const [toggle, setToggle] = useState(false)
+  const [toggleAbout, setToggleAbout] = useState(false)
+  const [toggleSkills, setToggleSkills] = useState(false)
+  const [toggleProjects, setToggleProjects] = useState(false)
   const [showAbout, setShowAbout] = useState(null)
   const [showSkills, setShowSkills] = useState(null)
-  const [showProyects, setShowProyects] = useState(null)
+  const [showProjects, setShowProjects] = useState(null)
 
   function cambiarDisplayResponsive(subject) {
      if (subject === 1) {
-      setShowAbout(<About responsiveStyle='md:hidden'/>)
+      if (toggleAbout === false) {
+        setShowAbout(<About responsiveStyle='md:hidden'/>)
+        setToggleAbout(true)
+      } else if (toggleAbout === true ) {
+        setShowAbout("")
+        setToggleAbout(false)
+      }
     } else if (subject === 2) {
-      setShowSkills(<Skills responsiveStyle='md:hidden'/>)
+      if (!toggleSkills) {
+        setShowSkills(<Skills responsiveStyle='md:hidden'/>)
+        setToggleSkills(true)
+      } else {
+        setShowSkills("")
+        setToggleSkills(false)
+      }
     } else if (subject === 3) {
-       setShowProyects(<Projects responsiveStyle='md:hidden'/>)
+      if (!toggleProjects) {
+        setShowProjects(<Projects responsiveStyle='md:hidden'/>)
+        setToggleProjects(true)
+      } else {
+        setShowProjects("")
+        setToggleProjects(false)
+      }
     }
   }
 
@@ -43,16 +62,17 @@ export default function Main() {
               &nbsp;Sobre&nbsp;
             </li>
               {/* Elemento html con funcion para responsive */}
-            <li onClick={() => cambiarDisplayResponsive(<About responsiveStyle='visible md:hidden'/>) } id="about" data-text='&nbsp;SOBRE' className='my-4 md:hidden cursor-pointer'  >
+            <li onClick={() => cambiarDisplayResponsive(1)} id="about" data-text='&nbsp;SOBRE' className='my-4 md:hidden cursor-pointer'  >
               &nbsp;Sobre&nbsp;
             </li>
               {showAbout}
-            <li onClick={() => cambiarDisplay(<Skills responsiveStyle=''/>)} id="skills" data-text='&nbsp;Competencias' className=" md:visible my-4 cursor-pointer">&nbsp;Competencias&nbsp;</li>
             {/* ELemento html con funcion en resposive */}
-            <li onClick={() => cambiarDisplayResponsive(<Skills  responsiveStyle='md:hidden'/>)} id="skills" data-text='&nbsp;Competencias' className="visible md:hidden my-4 cursor-pointer">&nbsp;Competencias&nbsp;</li>
+            <li onClick={() => cambiarDisplayResponsive(2)} id="skills" data-text='&nbsp;Competencias' className=" md:hidden my-4 cursor-pointer">&nbsp;Competencias&nbsp;</li>
             {showSkills}
-            <li onClick={() => cambiarDisplay(<Projects />)} id="projects" data-text='&nbsp;Proyectos' className="my-5 cursor-pointer ">&nbsp;Proyectos&nbsp;</li>
-            {showProyects}
+            <li onClick={() => cambiarDisplay(<Skills responsiveStyle=''/>)} id="skills" data-text='&nbsp;Competencias' className="nonresponsive  md:visible   my-4 cursor-pointer">&nbsp;Competencias&nbsp;</li>
+            <li onClick={() => cambiarDisplayResponsive(3)} id="projects" data-text='&nbsp;Proyectos' className=" md:hidden my-5 cursor-pointer ">&nbsp;Proyectos&nbsp;</li>
+            <li onClick={() => cambiarDisplay(<Projects />)} id="projects" data-text='&nbsp;Proyectos' className="nonresponsive  md:visible my-5 cursor-pointer ">&nbsp;Proyectos&nbsp;</li>
+            {showProjects}
           </ul>
         </div>
         <div className="projectDisplay w-[70%] h-[33rem]  invisible md:visible absolute right-4 bottom-[12rem] ">

@@ -13,27 +13,27 @@ export default function Skills({responsiveStyle}) {
 
 
   return ( 
- <div className={`flex ${responsiveStyle} animate-fadein font-inconsolata m-24 flex-col items-center `}> 
+ <div className={`flex ${responsiveStyle} animate-fadein font-inconsolata my-3 md:m-24 flex-col items-center `}> 
       
       <h2 class="text-white font-bold text-xl">Lenguages</h2>
      <div className="flex m-8">
-        <img className='h-24 mx-4  ' src={htmlLogo} alt="LogoHtml"/>
-        <img className='h-24 mx-4 ' src={cssLogo} alt="LogoCss"/>
-        <img className='h-24 mx-4 ' src={jsLogo} alt="LogoJs"/>
+        <img className='h-16  md:h-24 mx-4  ' src={htmlLogo} alt="LogoHtml"/>
+        <img className='h-16  md:h-24 mx-4 ' src={cssLogo} alt="LogoCss"/>
+        <img className='h-16 md:h-24 mx-4 ' src={jsLogo} alt="LogoJs"/>
       </div>
 
       <h1 class="text-white text-xl font-bold">Frameworks</h1>
         <div class="flex m-8">
-        <img className='h-24 mx-4 'src={reactLogo} alt="LogoReact"/>
-        <img className='h-24 mx-4 'src={tailwindLogo} alt="Logotailwind"/>
-        <img className='h-24 mx-4 'src={bootstrapLogo} alt="LogoBoostrap"/>
+        <img className='h-16 md:h-24 mx-4 'src={reactLogo} alt="LogoReact"/>
+        <img className='h-16  md:h-24 mx-4 'src={tailwindLogo} alt="Logotailwind"/>
+        <img className='h-16  md:h-24 mx-4 'src={bootstrapLogo} alt="LogoBoostrap"/>
       </div>
 
-        <h2 class="text-white font-bold text-xl">Herramientas y sistemas operativos </h2>
+        <h2 class="text-white text-center font-bold text-xl">Herramientas y sistemas operativos </h2>
         <div class="flex m-8">
-        <img className='h-24 mx-3 ' src={gitLogo} alt="LogoGit"/>
-        <img className='h-24 mx-3 ' src={linuxLogo} alt="LogoLinux"/>
-        <img className='h-24 mx-3 ' src={nodejs} alt="LogoLinux"/>
+        <img className='h-16  md:h-24 mx-3 ' src={gitLogo} alt="LogoGit"/>
+        <img className='h-16 md:h-24 mx-3 ' src={linuxLogo} alt="LogoLinux"/>
+        <img className='h-16 md:h-24 mx-3 ' src={nodejs} alt="LogoLinux"/>
       </div>
     </div>
   )

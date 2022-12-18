@@ -10,7 +10,6 @@ import proyectosDB from '../Data/proyectos.js'
 
 export default function Projects() {
   const [currentSlide, setCurrentSlide] = useState(0)
- console.log(proyectosDB)
 
   // Funciones de carrousel
   function nextSlide() {
@@ -26,19 +25,16 @@ export default function Projects() {
     setCurrentSlide(newSlide)
   }
 
-
-
   return (
 
     <div className=" font-inconsolata">
-      <div className="mt-8 animate-fadein h-[28rem]">
+      <div className="md:mt-8 animate-fadein md: h-[28rem]">
 
         {/* Controles de carrousel, swipe para mobile */}
-        <AiOutlineLeft onClick={prevSlide} className='absolute left-14 text-3xl inset-y-1/2 text-white cursor-pointer' />
-        <Swipe onSwipeLeft={nextSlide} onSwipeRight={prevSlide}>
+        <AiOutlineLeft onClick={prevSlide} className='invisible md:visible absolute left-14 text-3xl inset-y-1/2 text-white cursor-pointer' />
+          <Swipe  onSwipeLeft={nextSlide} onSwipeRight={prevSlide}>
 
-
-          <div className=" m-40  flex overflow-hidden relative">
+          <div className=" mt-5 md:m-40  flex overflow-hidden relative">
 
 
             {/* Renderizado de carrousel */}
@@ -88,7 +84,7 @@ export default function Projects() {
             })}
           </div>
         </Swipe>
-        <AiOutlineRight onClick={nextSlide} className='absolute right-14 text-3xl inset-y-1/2 text-white cursor-pointer' />
+        <AiOutlineRight onClick={nextSlide} className='invisible md:visible absolute right-14 text-3xl inset-y-1/2 text-white cursor-pointer' />
       </div>
 
 
