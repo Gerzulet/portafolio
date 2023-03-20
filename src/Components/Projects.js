@@ -32,7 +32,7 @@ export default function Projects() {
 
         {/* Controles de carrousel, swipe para mobile */}
         <AiOutlineLeft onClick={prevSlide} className='invisible md:visible absolute left-14 text-3xl inset-y-1/2 text-white cursor-pointer' />
-          <Swipe  onSwipeLeft={nextSlide} onSwipeRight={prevSlide}>
+        <Swipe onSwipeLeft={nextSlide} onSwipeRight={prevSlide}>
 
           <div className=" mt-5 md:m-40  flex overflow-hidden relative">
 
@@ -58,9 +58,9 @@ export default function Projects() {
                   <h1 class="absolute top-[60%] text-red-600 left-14">{slide.responsive}</h1>
 
                   <div class="text-white absolute flex flex-col bottom-[85%] right-[93%]">
-                    {slide.responsive === false ? 
-                    <img className='h-12' src={nonResponsiveIcon} alt="non Resposive"/> : <img className='h-12' src={responsiveIcon} alt="responsive"/>
-                     }
+                    {slide.responsive === false ?
+                      <img className='h-12' src={nonResponsiveIcon} alt="non Resposive" /> : <img className='h-12' src={responsiveIcon} alt="responsive" />
+                    }
                   </div>
                   <div class="text-white absolute flex flex-col bottom-[30%] left-[93%]">
                     {slide.technologies.map((el, index) => {
@@ -69,15 +69,15 @@ export default function Projects() {
 
                       )
                     })}
-                    <a target="_blank" href={slide.linkPreview}>
-                    <img className='h-12 my-2' src={previewIcon} alt="preview"/>
+                    <a target="_blank" rel="noreferrer" href={slide.linkPreview}>
+                      <img className='h-12 my-2' src={previewIcon} alt="preview" />
                     </a>
-                    <a target="_blank" href={slide.linkGithub}>
-                    <img className='h-12 my-2' src={githubIcon} alt="seeCode"/>
+                    <a target="_blank" rel="noreferrer" href={slide.linkGithub}>
+                      <img className='h-12 my-2' src={githubIcon} alt="seeCode" />
                     </a>
                   </div>
 
-                  
+
 
                 </div>
               );

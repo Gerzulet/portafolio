@@ -1,5 +1,5 @@
 import './Main.css'
-import { useContext, useState } from 'react'
+import { useState } from 'react'
 import About from './About'
 import Skills from './Skills'
 import Start from './Start'
@@ -18,17 +18,17 @@ export default function Main() {
   const [showProjects, setShowProjects] = useState(null)
 
   function cambiarDisplayResponsive(subject) {
-     if (subject === 1) {
+    if (subject === 1) {
       if (toggleAbout === false) {
-        setShowAbout(<About responsiveStyle='md:hidden'/>)
+        setShowAbout(<About responsiveStyle='md:hidden' />)
         setToggleAbout(true)
-      } else if (toggleAbout === true ) {
+      } else if (toggleAbout === true) {
         setShowAbout("")
         setToggleAbout(false)
       }
     } else if (subject === 2) {
       if (!toggleSkills) {
-        setShowSkills(<Skills responsiveStyle='md:hidden'/>)
+        setShowSkills(<Skills responsiveStyle='md:hidden' />)
         setToggleSkills(true)
       } else {
         setShowSkills("")
@@ -36,7 +36,7 @@ export default function Main() {
       }
     } else if (subject === 3) {
       if (!toggleProjects) {
-        setShowProjects(<Projects responsiveStyle='md:hidden'/>)
+        setShowProjects(<Projects responsiveStyle='md:hidden' />)
         setToggleProjects(true)
       } else {
         setShowProjects("")
@@ -46,10 +46,10 @@ export default function Main() {
   }
 
   function cambiarDisplay(subject) {
-      setSection(subject)
-    }
+    setSection(subject)
+  }
 
-  
+
 
 
   return (
@@ -61,15 +61,15 @@ export default function Main() {
             <li onClick={() => cambiarDisplay(<About responsiveStyle='' />)} id="about" data-text='&nbsp;SOBRE' className='my-4 invisible md:visible cursor-pointer'  >
               &nbsp;Sobre&nbsp;
             </li>
-              {/* Elemento html con funcion para responsive */}
+            {/* Elemento html con funcion para responsive */}
             <li onClick={() => cambiarDisplayResponsive(1)} id="about" data-text='&nbsp;SOBRE' className='my-4 md:hidden cursor-pointer'  >
               &nbsp;Sobre&nbsp;
             </li>
-              {showAbout}
+            {showAbout}
             {/* ELemento html con funcion en resposive */}
             <li onClick={() => cambiarDisplayResponsive(2)} id="skills" data-text='&nbsp;Competencias' className=" md:hidden my-4 cursor-pointer">&nbsp;Competencias&nbsp;</li>
             {showSkills}
-            <li onClick={() => cambiarDisplay(<Skills responsiveStyle=''/>)} id="skills" data-text='&nbsp;Competencias' className="nonresponsive  md:visible   my-4 cursor-pointer">&nbsp;Competencias&nbsp;</li>
+            <li onClick={() => cambiarDisplay(<Skills responsiveStyle='' />)} id="skills" data-text='&nbsp;Competencias' className="nonresponsive  md:visible   my-4 cursor-pointer">&nbsp;Competencias&nbsp;</li>
             <li onClick={() => cambiarDisplayResponsive(3)} id="projects" data-text='&nbsp;Proyectos' className=" md:hidden my-5 cursor-pointer ">&nbsp;Proyectos&nbsp;</li>
             <li onClick={() => cambiarDisplay(<Projects />)} id="projects" data-text='&nbsp;Proyectos' className="nonresponsive  md:visible my-5 cursor-pointer ">&nbsp;Proyectos&nbsp;</li>
             {showProjects}
