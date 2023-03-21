@@ -1,5 +1,4 @@
 import profilePic from '../Assets/profilePicCar.png'
-import { AiFillCloseCircle } from 'react-icons/ai'
 import LanguageContext from '../LanguageContext/LanguageContext'
 import { useContext } from "react";
 
@@ -26,9 +25,7 @@ export default function About({ responsiveStyle, display, animation }) {
         {language.mision}
 
       </p>
-      <button className='md:hidden  mt-7'>
-        <AiFillCloseCircle size='1em' color='white' />
-      </button>
+
     </div>
   )
 }
