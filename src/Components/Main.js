@@ -56,7 +56,7 @@ export default function Main() {
     <>
       <main className="main md:h-[44rem] w-full  relative">
         <div id="menu" className="w-[90%] md:w-[35%] h-[40rem] absolute left-5 md:left-4 top-5 ">
-          <h1 className='text-white md:invisible '>ProfilPic</h1>
+          <h1 className='text-white md:invisible hidden'>Profile Pic</h1>
           <ul className="flex flex-col items-center mt-40 relative text-white text-4xl">
             <li onClick={() => cambiarDisplay(<About responsiveStyle='' />)} id="about" data-text='&nbsp;SOBRE' className='my-4 invisible md:visible cursor-pointer'  >
               &nbsp;Sobre&nbsp;
