@@ -1,5 +1,8 @@
 const translations = [
   {
+    "about": "Sobre",
+    "skills": "Competencias",
+    "projects": "Proyectos",
     "language": "spanish",
     "presentation": "Hola! Me llamo German Soto, soy desarrollador de aplicaciones web. ",
     "studies": "Actualmente soy estudiante de ingenieria en la facultad de Buenos Aires, durante mis inicios en la carrera descubrí mi pasion por la programacion, desde el momento en el que toque codigo con el lenguaje C",
@@ -10,6 +13,9 @@ const translations = [
 
   },
   {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
     "language": "english",
     "presentation": "Hi! My name is German Soto, i'm a Web Developer",
     "studies": "Right now i'm a electronic engineer student at the university of Buenos Aires, throughout the start of the career i discovered my pasion for programming, since i got in touch with the C language.",
@@ -21,6 +27,9 @@ const translations = [
 
   },
   {
+    "about": "À propos de moi",
+    "skills": "Compétences",
+    "projects": "Projets",
     "language": "french",
     "presentation": "Bonjour, je m'apelle German Soto. Je suis an Web Developer.",
     "studies": "Maintenant, je suis an etudiant en ingénierie à l'Université de Buenos Aires, au debut de mon carriere j'ai decouvert mon passion pour la programmation, quand j'appris le langage de programmation C.",

@@ -4,11 +4,13 @@ import About from './About'
 import Skills from './Skills'
 import Start from './Start'
 import Projects from './Projects'
-
+import { useContext } from "react";
+import LanguageContext from '../LanguageContext/LanguageContext'
 
 
 export default function Main() {
 
+  const { language } = useContext(LanguageContext)
   const [section, setSection] = useState(<Start />)
   const [toggleAbout, setToggleAbout] = useState(false)
   const [toggleSkills, setToggleSkills] = useState(false)
@@ -59,19 +61,19 @@ export default function Main() {
           <h1 className='text-white md:invisible hidden'>Profile Pic</h1>
           <ul className="flex flex-col items-center mt-40 relative text-white text-4xl">
             <li onClick={() => cambiarDisplay(<About responsiveStyle='' />)} id="about" data-text='&nbsp;SOBRE' className='my-4 invisible md:visible cursor-pointer'  >
-              &nbsp;Sobre&nbsp;
+              &nbsp;{language.about}&nbsp;
             </li>
             {/* Elemento html con funcion para responsive */}
             <li onClick={() => cambiarDisplayResponsive(1)} id="about" data-text='&nbsp;SOBRE' className='my-4 md:hidden cursor-pointer'  >
-              &nbsp;Sobre&nbsp;
+              &nbsp;{language.about}&nbsp;
             </li>
             {showAbout}
             {/* ELemento html con funcion en resposive */}
-            <li onClick={() => cambiarDisplayResponsive(2)} id="skills" data-text='&nbsp;Competencias' className=" md:hidden my-4 cursor-pointer">&nbsp;Competencias&nbsp;</li>
+            <li onClick={() => cambiarDisplayResponsive(2)} id="skills" data-text='&nbsp;Competencias' className=" md:hidden my-4 cursor-pointer">&nbsp;{language.skills}&nbsp;</li>
             {showSkills}
-            <li onClick={() => cambiarDisplay(<Skills responsiveStyle='' />)} id="skills" data-text='&nbsp;Competencias' className="nonresponsive  md:visible   my-4 cursor-pointer">&nbsp;Competencias&nbsp;</li>
-            <li onClick={() => cambiarDisplayResponsive(3)} id="projects" data-text='&nbsp;Proyectos' className=" md:hidden my-5 cursor-pointer ">&nbsp;Proyectos&nbsp;</li>
-            <li onClick={() => cambiarDisplay(<Projects />)} id="projects" data-text='&nbsp;Proyectos' className="nonresponsive  md:visible my-5 cursor-pointer ">&nbsp;Proyectos&nbsp;</li>
+            <li onClick={() => cambiarDisplay(<Skills responsiveStyle='' />)} id="skills" data-text='&nbsp;Competencias' className="nonresponsive  md:visible   my-4 cursor-pointer">&nbsp;{language.skills}&nbsp;</li>
+            <li onClick={() => cambiarDisplayResponsive(3)} id="projects" data-text='&nbsp;Proyectos' className=" md:hidden my-5 cursor-pointer ">&nbsp;{language.projects}&nbsp;</li>
+            <li onClick={() => cambiarDisplay(<Projects />)} id="projects" data-text='&nbsp;Proyectos' className="nonresponsive  md:visible my-5 cursor-pointer ">&nbsp;{language.projects}&nbsp;</li>
             {showProjects}
           </ul>
         </div>

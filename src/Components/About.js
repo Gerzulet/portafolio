@@ -7,7 +7,6 @@ import { useContext } from "react";
 export default function About({ responsiveStyle, display, animation }) {
 
   const { language } = useContext(LanguageContext)
-  console.log(language)
 
   return (
     <div className={`md:mt-24 ${responsiveStyle} ${display} ${animation} items-center animate-fadein  h-auto flex flex-col justify-center`}>
