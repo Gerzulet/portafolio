@@ -1,10 +1,11 @@
 import noteAppPreview from '../Assets/notetakingappPreview.gif'
 import landingPagePreview from '../Assets/landingPagePreview.gif'
-import catWorking from '../Assets/catWorking.jpg'
 import tailwindIcon from '../Assets/tailwindLogo.svg'
 import reactIcon from '../Assets/reactLogo.svg'
 import jsLogo from '../Assets/jslogo.svg'
+import firebaseLogo from '../Assets/icons8-firebase-48.png'
 import bootstrapLogo from '../Assets/bootstrapLogo.svg'
+import bookecommerce from '../Assets/bookecommerce.gif'
 
 
 const ProyectosDB = [
@@ -18,11 +19,12 @@ const ProyectosDB = [
 
   },
   {
-    'image': catWorking,
-    'technologies': [reactIcon, tailwindIcon],
-    'linkGithub': 'https://github.com/Gerzulet/ProyectoFinalSoto',
+    'image': bookecommerce,
+    'technologies': [reactIcon, tailwindIcon, firebaseLogo],
+    'linkGithub': 'https://github.com/Gerzulet/Books-ECommerce',
     'responsive': true,
-    'ProyectTitle': 'E-Commerce (WORK IN PROGRESS)',
+    'ProyectTitle': 'E-Commerce',
+    'linkPreview': 'https://soto-book-ecommerce.netlify.app/'
 
   },
   {
