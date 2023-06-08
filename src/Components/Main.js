@@ -1,5 +1,5 @@
 import './Main.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import About from './About'
 import Skills from './Skills'
 import Start from './Start'
@@ -52,6 +52,83 @@ export default function Main() {
   }
 
 
+  // Animation for navbar items, thanks to hyperflex youtube channel
+
+  useEffect(() => {
+    const sections = ['#about', '#skills', '#projects'];
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let interval = null;
+
+    sections.forEach(el => {
+      const element = document.querySelector(el);
+      if (!element.onmouseover) { // Verificar si el manejador de eventos ya está agregado
+        element.onmouseover = event => {
+          let iteration = 0;
+          clearInterval(interval);
+
+          interval = setInterval(() => {
+            event.target.innerText = event.target.dataset.value
+              .split("")
+              .map((letter, index) => {
+                if (index < iteration) {
+                  return event.target.dataset.value[index];
+                }
+                return letters[Math.floor(Math.random() * 26)];
+              })
+              .join("");
+
+            if (iteration >= event.target.dataset.value.length) {
+              clearInterval(interval);
+            }
+
+            iteration += 1 / 3;
+          }, 30);
+        };
+        element.onmouseout = event => {
+          clearInterval(interval);
+          event.target.innerText = event.target.dataset.value;
+        };
+      }
+    });
+  }, [])
+
+  useEffect(() => {
+    const sections = ['#aboutResponsive', '#skillsResponsive', '#projectsResponsive'];
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let interval = null;
+
+    sections.forEach(el => {
+      const element = document.querySelector(el);
+      element.onclick = event => {
+        let iteration = 0;
+        clearInterval(interval);
+
+        interval = setInterval(() => {
+          event.target.innerText = event.target.dataset.value
+            .split("")
+            .map((letter, index) => {
+              if (index < iteration) {
+                return event.target.dataset.value[index];
+              }
+              return letters[Math.floor(Math.random() * 26)];
+            })
+            .join("");
+
+          if (iteration >= event.target.dataset.value.length) {
+            clearInterval(interval);
+          }
+
+          iteration += 1 / 3;
+        }, 30);
+        element.onmouseout = event => {
+          clearInterval(interval);
+          event.target.innerText = event.target.dataset.value;
+        };
+      }
+    });
+  }, [])
+
+
 
 
   return (
@@ -60,20 +137,20 @@ export default function Main() {
         <div id="menu" className="w-[90%] md:w-[35%] h-[40rem] absolute left-5 md:left-4 top-5 ">
           <h1 className='text-white md:invisible hidden'>Profile Pic</h1>
           <ul className="flex flex-col items-center mt-40 relative text-white text-4xl">
-            <li onClick={() => cambiarDisplay(<About responsiveStyle='' />)} id="about" data-text='&nbsp;SOBRE' className='my-4 invisible md:visible cursor-pointer'  >
+            <li data-value={language.about} onClick={() => cambiarDisplay(<About responsiveStyle='' />)} id="about" className='my-4 invisible md:visible cursor-pointer'  >
               &nbsp;{language.about}&nbsp;
             </li>
             {/* Elemento html con funcion para responsive */}
-            <li onClick={() => cambiarDisplayResponsive(1)} id="about" data-text='&nbsp;SOBRE' className='my-4 md:hidden cursor-pointer'  >
+            <li onClick={() => cambiarDisplayResponsive(1)} data-value={language.about} id="aboutResponsive" data-text='&nbsp;SOBRE' className='my-4 md:hidden cursor-pointer'  >
               &nbsp;{language.about}&nbsp;
             </li>
             {showAbout}
             {/* ELemento html con funcion en resposive */}
-            <li onClick={() => cambiarDisplayResponsive(2)} id="skills" data-text='&nbsp;Competencias' className=" md:hidden my-4 cursor-pointer">&nbsp;{language.skills}&nbsp;</li>
+            <li data-value={language.skills} onClick={() => cambiarDisplayResponsive(2)} id="skillsResponsive" data-text='&nbsp;Competencias' className=" md:hidden my-4 cursor-pointer">&nbsp;{language.skills}&nbsp;</li>
             {showSkills}
-            <li onClick={() => cambiarDisplay(<Skills responsiveStyle='' />)} id="skills" data-text='&nbsp;Competencias' className="nonresponsive  md:visible   my-4 cursor-pointer">&nbsp;{language.skills}&nbsp;</li>
-            <li onClick={() => cambiarDisplayResponsive(3)} id="projects" data-text='&nbsp;Proyectos' className=" md:hidden my-5 cursor-pointer ">&nbsp;{language.projects}&nbsp;</li>
-            <li onClick={() => cambiarDisplay(<Projects />)} id="projects" data-text='&nbsp;Proyectos' className="nonresponsive  md:visible my-5 cursor-pointer ">&nbsp;{language.projects}&nbsp;</li>
+            <li data-value={language.skills} onClick={() => cambiarDisplay(<Skills responsiveStyle='' />)} id="skills" data-text='&nbsp;Competencias' className="nonresponsive  md:visible   my-4 cursor-pointer">&nbsp;{language.skills}&nbsp;</li>
+            <li data-value={language.projects} onClick={() => cambiarDisplayResponsive(3)} id="projectsResponsive" data-text='&nbsp;Proyectos' className=" md:hidden my-5 cursor-pointer ">&nbsp;{language.projects}&nbsp;</li>
+            <li data-value={language.projects} onClick={() => cambiarDisplay(<Projects />)} id="projects" data-text='&nbsp;Proyectos' className="nonresponsive  md:visible my-5 cursor-pointer ">&nbsp;{language.projects}&nbsp;</li>
             {showProjects}
           </ul>
         </div>

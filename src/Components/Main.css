@@ -1,42 +1,42 @@
 
 
-#about,#contact, #skills  {
+#about,#contact, #skills, #aboutResponsive,#skillsResponsive, #projectsResponsive  {
   position: relative;
-  font-weight: 900;
+  font-family: 'Space Mono', monospace;
+  font-weight: 800;
   text-transform: uppercase;
-  color:transparent; 
+  /* color:transparent;  */
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
 }
-  #projects::before, #about::before, #contact::before, #skills::before {
-  content: attr(data-text);
-  position:absolute; 
-  color: #fff; 
-  width: 0; 
-  overflow: hidden; 
-  filter: drop-shadow(0 0 25px #fff);
 
+#about:hover,#projects:hover,#contact:hover, #skills:hover {
+  background-color: white;
+  color: black;
+    border-radius: clamp(0.4rem, 0.75vw, 1rem);
+  padding: 0rem clamp(2rem, 2vw, 3rem);
 }
 
+#projects:hover{
 
-#projects:hover::before, #about:hover::before, #contact:hover::before, #skills:hover::before{
-  width: 100%;
+  background-color: red;
 }
+
 
 #about {
- animation: appear 1.0s ;
+ animation: appear 0.7s ;
 }
 #contact {
- animation: appear 1.5s ;
+ animation: appear 1.0s ;
 }
 #skills {
- animation: appear 2.0s ;
+ animation: appear 1.5s ;
 }
 
 
 #projects {
   position: relative;
   text-transform: uppercase;
-  color:transparent; 
+  /* color:transparent;  */
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
  animation: appearProject 4s  ;
  font-weight: 1000;
@@ -80,4 +80,5 @@
 100% {
 }
 }
+
 
