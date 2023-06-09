@@ -53,8 +53,8 @@ export default function Main() {
 
 
   // Animation for navbar items, thanks to hyperflex youtube channel
+  function hackAnimations() {
 
-  useEffect(() => {
     const sections = ['#about', '#skills', '#projects'];
     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let interval = null;
@@ -84,13 +84,39 @@ export default function Main() {
             iteration += 1 / 3;
           }, 30);
         };
+
+
         element.onmouseout = event => {
           clearInterval(interval);
           event.target.innerText = event.target.dataset.value;
         };
       }
     });
-  }, [])
+  }
+
+
+  useEffect(() => {
+    hackAnimations()
+    document.querySelector('#about').dispatchEvent(new Event('mouseover'))
+    setTimeout(() => {
+      document.querySelector('#skills').dispatchEvent(new Event('mouseover'))
+    }, 1400);
+    setTimeout(() => {
+      document.querySelector('#projects').dispatchEvent(new Event('mouseover'))
+    }, 3000);
+    document.querySelector('#aboutResponsive').dispatchEvent(new Event('click'))
+    setTimeout(() => {
+      document.querySelector('#skillsResponsive').dispatchEvent(new Event('click'))
+    }, 1400);
+    setTimeout(() => {
+      document.querySelector('#projectsResponsive').dispatchEvent(new Event('click'))
+    }, 3000);
+
+
+  }, [language])
+
+
+
 
   useEffect(() => {
     const sections = ['#aboutResponsive', '#skillsResponsive', '#projectsResponsive'];
@@ -126,9 +152,7 @@ export default function Main() {
         };
       }
     });
-  }, [])
-
-
+  }, [language])
 
 
   return (
