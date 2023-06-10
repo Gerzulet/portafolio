@@ -52,48 +52,6 @@ export default function Main() {
   }
 
 
-  // Animation for navbar items, thanks to hyperflex youtube channel
-  function hackAnimations() {
-
-    const sections = ['#about', '#skills', '#projects'];
-    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    let interval = null;
-
-    sections.forEach(el => {
-      const element = document.querySelector(el);
-      if (!element.onmouseover) { // Verificar si el manejador de eventos ya está agregado
-        element.onmouseover = event => {
-          let iteration = 0;
-          clearInterval(interval);
-
-          interval = setInterval(() => {
-            event.target.innerText = event.target.dataset.value
-              .split("")
-              .map((letter, index) => {
-                if (index < iteration) {
-                  return event.target.dataset.value[index];
-                }
-                return letters[Math.floor(Math.random() * 26)];
-              })
-              .join("");
-
-            if (iteration >= event.target.dataset.value.length) {
-              clearInterval(interval);
-            }
-
-            iteration += 1 / 3;
-          }, 30);
-        };
-
-
-        element.onmouseout = event => {
-          clearInterval(interval);
-          event.target.innerText = event.target.dataset.value;
-        };
-      }
-    });
-  }
-
 
   useEffect(() => {
     hackAnimations()
@@ -154,6 +112,56 @@ export default function Main() {
     });
   }, [language])
 
+
+
+
+
+
+
+
+
+
+  // Animation for navbar items, thanks to hyperflex youtube channel
+  function hackAnimations() {
+
+    const sections = ['#about', '#skills', '#projects'];
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let interval = null;
+
+    sections.forEach(el => {
+      const element = document.querySelector(el);
+      if (!element.onmouseover) { // Verificar si el manejador de eventos ya está agregado
+        element.onmouseover = event => {
+          let iteration = 0;
+          clearInterval(interval);
+
+          interval = setInterval(() => {
+            event.target.innerText = event.target.dataset.value
+              .split("")
+              .map((letter, index) => {
+                if (index < iteration) {
+                  return event.target.dataset.value[index];
+                }
+                return letters[Math.floor(Math.random() * 26)];
+              })
+              .join("");
+
+            if (iteration >= event.target.dataset.value.length) {
+              clearInterval(interval);
+            }
+
+            iteration += 1 / 2.0;
+          }, 30);
+        };
+
+
+        element.onmouseout = event => {
+          clearInterval(interval);
+          event.target.innerText = event.target.dataset.value;
+        };
+      }
+    });
+  }
 
   return (
     <>
