@@ -1,14 +1,14 @@
 import './App.css';
 import Main from './Components/Main';
 import NavBar from './Components/NavBar';
-import {LanguageProvider} from './LanguageContext/LanguageContext'
+import { LanguageProvider } from './LanguageContext/LanguageContext'
 function App() {
   return (
     <>
 
       <LanguageProvider>
-     <NavBar/> 
-      <Main/>
+        <NavBar />
+        <Main />
       </LanguageProvider>
     </>
   );

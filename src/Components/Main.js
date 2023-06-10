@@ -48,7 +48,18 @@ export default function Main() {
   }
 
   function cambiarDisplay(subject) {
+    setRippleAnimation()
     setSection(subject)
+  }
+
+  function setRippleAnimation() {
+
+    const spans = document.querySelectorAll("span")
+    spans.forEach(el => {
+      console.log(el)
+      el.classList.add("pulse")
+    })
+
   }
 
 
@@ -161,8 +172,12 @@ export default function Main() {
         };
       }
     });
+
   }
 
+  setInterval(() => {
+
+  }, 300);
   return (
     <>
       <main className="main md:h-[44rem] w-full  relative">
@@ -190,6 +205,17 @@ export default function Main() {
           {section}
         </div>
 
+        <section>
+          <div className="bgPulse">
+            <span className=''></span>
+            <span className=''></span>
+            <span className='' > </span>
+            <span className=''></span>
+            <span className=''></span>
+          </div>
+
+
+        </section>
       </main>
     </>
   )
