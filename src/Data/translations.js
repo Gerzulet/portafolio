@@ -9,6 +9,7 @@ const translations = [
     "interests": "Me encanta todo lo relacionado al mundo IT, mantengo mis ojos en el desarrollo de software y la cyberseguridad.",
     "mision": "Mi mision es desenvolverme libremente en estos entornos y resolver situaciones cotidianas de la vida real.",
     "skillsLanguages": "Lenguajes",
+    "frameworks": "Frameworks y librerias",
     "tools": "Herramientas y sistemas operativos",
 
   },
@@ -22,6 +23,7 @@ const translations = [
     "interests": "I'm interesed in all related to IT, and keep my eyes in software development and cybersecurity.",
     "mision": "My mision is to be able to work with all these enviroments and to solve daily situations from real life. ",
     "skillsLanguages": "Languages",
+    "frameworks": "Frameworks and libraries",
     "tools": "Tools and operative systems."
 
 
@@ -36,6 +38,7 @@ const translations = [
     "interests": "J'aime le monde de IT, je garde les yeux fixés au software engineering et la cybersécurité.",
     "mision": "Ma mission est me developer dans ces environnements et résourdre des situations de la vie quotiedenne. ",
     "skillsLanguages": "Langages de programmation",
+    "frameworks": "Frameworks et technologies ",
     "tools": "Langues et systèmes d'exploitation"
 
 

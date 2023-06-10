@@ -6,7 +6,15 @@ import linuxLogo from '../Assets/linuxlogo.svg'
 import gitLogo from '../Assets/gitlogo.svg'
 import tailwindLogo from '../Assets/tailwindLogo.svg'
 import bootstrapLogo from '../Assets/bootstrapLogo.svg'
+import docker from '../Assets/docker.svg'
 import nodejs from '../Assets/nodejs.svg'
+import mongo from '../Assets/mongodb.png'
+import swagger from '../Assets/swagger.png'
+import express from '../Assets/express.svg'
+import nest from '../Assets/nest.svg'
+import c from '../Assets/c.svg'
+
+
 import LanguageContext from '../LanguageContext/LanguageContext'
 
 import { useContext } from "react";
@@ -22,17 +30,23 @@ export default function Skills({ responsiveStyle }) {
         <img className='h-16  md:h-24 mx-4  ' src={htmlLogo} alt="LogoHtml" />
         <img className='h-16  md:h-24 mx-4 ' src={cssLogo} alt="LogoCss" />
         <img className='h-16 md:h-24 mx-4 ' src={jsLogo} alt="LogoJs" />
+        <img className='h-16 md:h-24 mx-4 ' src={c} alt="LogoC" />
       </div>
 
-      <h1 class="text-white text-xl font-bold">Frameworks</h1>
+      <h1 class="text-white text-xl font-bold">{language.frameworks}</h1>
       <div class="flex m-8">
         <img className='h-16 md:h-24 mx-4 ' src={reactLogo} alt="LogoReact" />
+        <img className='h-16 md:h-24 mx-4 ' src={swagger} alt="LogoSwagger" />
         <img className='h-16  md:h-24 mx-4 ' src={tailwindLogo} alt="Logotailwind" />
         <img className='h-16  md:h-24 mx-4 ' src={bootstrapLogo} alt="LogoBoostrap" />
+        <img className='h-16  md:h-24 mx-4 ' src={express} alt="LogoExpress" />
+        <img className='h-16  md:h-24 mx-4 ' src={nest} alt="LogoNest" />
       </div>
 
       <h2 class="text-white text-center font-bold text-xl">{language.tools} </h2>
       <div class="flex m-8">
+        <img className='h-16  md:h-24 mx-4 ' src={docker} alt="LogoDocker" />
+        <img className='h-16  md:h-24 mx-4 ' src={mongo} alt="LogoMongo" />
         <img className='h-16  md:h-24 mx-3 ' src={gitLogo} alt="LogoGit" />
         <img className='h-16 md:h-24 mx-3 ' src={linuxLogo} alt="LogoLinux" />
         <img className='h-16 md:h-24 mx-3 ' src={nodejs} alt="LogoLinux" />
