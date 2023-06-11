@@ -13,3 +13,11 @@ New updates to make
  - [ ] Add new technologies
   [ ] MongoDB, Docker, Express, Testing, Documenting
 
+  [image]/home/germansz/Imágenes/Screenshot_50.png
+
+
+
+
+
+
+
