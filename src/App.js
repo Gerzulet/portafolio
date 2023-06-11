@@ -7,6 +7,7 @@ function App() {
     <>
 
       <LanguageProvider>
+
         <NavBar />
         <Main />
       </LanguageProvider>

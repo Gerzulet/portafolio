@@ -54,11 +54,16 @@ export default function Main() {
 
   function setRippleAnimation() {
 
-    const spans = document.querySelectorAll("span")
+    const spans = document.querySelectorAll(".bgPulse span")
     spans.forEach(el => {
       console.log(el)
       el.classList.add("pulse")
     })
+
+    setTimeout(() => {
+      const moons = document.querySelector(".moon")
+      moons.classList.add("backgroundimages")
+    }, 4000);
 
   }
 
@@ -175,12 +180,11 @@ export default function Main() {
 
   }
 
-  setInterval(() => {
 
-  }, 300);
+
   return (
     <>
-      <main className="main md:h-[44rem] w-full  relative">
+      <main id="particles-js" className="main md:h-[44rem] w-full  relative">
         <div id="menu" className="w-[90%] md:w-[35%] h-[40rem] absolute left-5 md:left-4 top-5 ">
           <h1 className='text-white md:invisible hidden'>Profile Pic</h1>
           <ul className="flex flex-col items-center mt-40 relative text-white text-4xl">
@@ -213,6 +217,19 @@ export default function Main() {
             <span className=''></span>
             <span className=''></span>
           </div>
+          <div className="moon ">
+            <span className=''></span>
+            <span className=''></span>
+            <span className='' > </span>
+            <span className=''></span>
+            <span className=''></span>
+            <span className=''></span>
+            <span className=''></span>
+            <span className=''></span>
+            <span className=''></span>
+            <span className=''></span>
+          </div>
+
 
 
         </section>

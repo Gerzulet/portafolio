@@ -10,7 +10,10 @@ import backend from '../Assets/ezgif.com-crop.gif'
 import express from '../Assets/express.svg'
 import mongo from '../Assets/mongodb.png'
 
+
+
 const ProyectosDB = [
+
   {
     'image': landingPagePreview,
     'technologies': [reactIcon, tailwindIcon],

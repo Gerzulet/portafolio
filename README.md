@@ -7,13 +7,10 @@ El portafolio maneja tres idiomas: Español, Inglés, y Francés.
 New updates to make 
 
 - [ ] Need to add ripples effect to make entrance to new backgroudns
- - [ ] Create ripple sample
+ - [X] Create ripple sample
  - [ ] Work in background template
 
- - [ ] Add new technologies
-  [ ] MongoDB, Docker, Express, Testing, Documenting
 
-  ![image](/home/germansz/Imágenes/Screenshot_50.png)
 
 
 
