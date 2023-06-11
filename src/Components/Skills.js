@@ -27,29 +27,29 @@ export default function Skills({ responsiveStyle }) {
 
       <h2 class="text-white font-bold text-xl">{language.skillsLanguages}</h2>
       <div className="flex m-8">
-        <img className='h-16  md:h-24 mx-4  ' src={htmlLogo} alt="LogoHtml" />
-        <img className='h-16  md:h-24 mx-4 ' src={cssLogo} alt="LogoCss" />
-        <img className='h-16 md:h-24 mx-4 ' src={jsLogo} alt="LogoJs" />
-        <img className='h-16 md:h-24 mx-4 ' src={c} alt="LogoC" />
+        <img title='HTML' className='h-16  md:h-24 mx-4  ' src={htmlLogo} alt="LogoHtml" />
+        <img title='CSS' className='h-16  md:h-24 mx-4 ' src={cssLogo} alt="LogoCss" />
+        <img title='Javascript' className='h-16 md:h-24 mx-4 ' src={jsLogo} alt="LogoJs" />
+        <img title='C Language' className='h-16 md:h-24 mx-4 ' src={c} alt="LogoC" />
       </div>
 
       <h1 class="text-white text-xl font-bold">{language.frameworks}</h1>
       <div class="flex m-8">
-        <img className='h-16 md:h-24 mx-4 ' src={reactLogo} alt="LogoReact" />
-        <img className='h-16 md:h-24 mx-4 ' src={swagger} alt="LogoSwagger" />
-        <img className='h-16  md:h-24 mx-4 ' src={tailwindLogo} alt="Logotailwind" />
-        <img className='h-16  md:h-24 mx-4 ' src={bootstrapLogo} alt="LogoBoostrap" />
-        <img className='h-16  md:h-24 mx-4 ' src={express} alt="LogoExpress" />
-        <img className='h-16  md:h-24 mx-4 ' src={nest} alt="LogoNest" />
+        <img title='React' className='h-16 md:h-24 mx-4 ' src={reactLogo} alt="LogoReact" />
+        <img title='Swagger Doc' className='h-16 md:h-24 mx-4 ' src={swagger} alt="LogoSwagger" />
+        <img title='Tailwind' className='h-16  md:h-24 mx-4 ' src={tailwindLogo} alt="Logotailwind" />
+        <img title='Bootstrap' className='h-16  md:h-24 mx-4 ' src={bootstrapLogo} alt="LogoBoostrap" />
+        <img title='ExpressJS' className='h-16  md:h-24 mx-4 ' src={express} alt="LogoExpress" />
+        <img title='NestJs' className='h-16  md:h-24 mx-4 ' src={nest} alt="LogoNest" />
       </div>
 
       <h2 class="text-white text-center font-bold text-xl">{language.tools} </h2>
       <div class="flex m-8">
-        <img className='h-16  md:h-24 mx-4 ' src={docker} alt="LogoDocker" />
-        <img className='h-16  md:h-24 mx-4 ' src={mongo} alt="LogoMongo" />
-        <img className='h-16  md:h-24 mx-3 ' src={gitLogo} alt="LogoGit" />
-        <img className='h-16 md:h-24 mx-3 ' src={linuxLogo} alt="LogoLinux" />
-        <img className='h-16 md:h-24 mx-3 ' src={nodejs} alt="LogoLinux" />
+        <img title='Docker' className='h-16  md:h-24 mx-4 ' src={docker} alt="LogoDocker" />
+        <img title='MongoDB' className='h-16  md:h-24 mx-4 ' src={mongo} alt="LogoMongo" />
+        <img title='Git' className='h-16  md:h-24 mx-3 ' src={gitLogo} alt="LogoGit" />
+        <img title='Linux' className='h-16 md:h-24 mx-3 ' src={linuxLogo} alt="LogoLinux" />
+        <img title='NodeJS' className='h-16 md:h-24 mx-3 ' src={nodejs} alt="LogoNode" />
       </div>
     </div>
   )

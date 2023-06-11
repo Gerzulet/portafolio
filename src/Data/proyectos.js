@@ -6,7 +6,9 @@ import jsLogo from '../Assets/jslogo.svg'
 import firebaseLogo from '../Assets/icons8-firebase-48.png'
 import bootstrapLogo from '../Assets/bootstrapLogo.svg'
 import bookecommerce from '../Assets/bookecommerce.gif'
-
+import backend from '../Assets/ezgif.com-crop.gif'
+import express from '../Assets/express.svg'
+import mongo from '../Assets/mongodb.png'
 
 const ProyectosDB = [
   {
@@ -27,6 +29,16 @@ const ProyectosDB = [
     'linkPreview': 'https://soto-book-ecommerce.netlify.app/'
 
   },
+  {
+    'image': backend,
+    'technologies': [mongo, express, jsLogo],
+    'linkGithub': 'https://github.com/Gerzulet/E-Commerce-Backend',
+    'responsive': false,
+    'ProyectTitle': 'Ecommerce (Backend)',
+    'linkPreview': 'https://e-commerce-backend-production-a1b2.up.railway.app/api'
+
+  },
+
   {
     'image': noteAppPreview,
     'ProyectTitle': 'Note Taking App',
