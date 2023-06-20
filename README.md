@@ -1,5 +1,10 @@
 # Portafolio/Portfolio
 
+![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/Gerzulet/portafolio)
+![Netlify](https://img.shields.io/netlify/8c1c9402-a08d-401c-9907-04b1e830bb11)
+![Website](https://img.shields.io/website)
+
+
 Hola!, me llamo German, soy un desarrollador Fullstack.
 Hi!, my name is German, i am Fullstack Developer.
 
@@ -18,6 +23,9 @@ Currently, I am seeking employment as a developer while continuing to further en
 This portfolio showcases the various technologies I have learned over time.
 
 ## Sobre este portafolio / About this portfolio
+![Recording 2023-06-20 at 14 17 31](https://github.com/Gerzulet/portafolio/assets/92329156/345a0a15-ef21-4109-a75f-f2d9e7a06f01)
+
+
 
 Este portfolio fue creado React, asistido con tecnologias como AnimeJS para la animacion de entrada.
 This project was created with React, assisted with technologies like AnimeJS for the entrance animation.
