@@ -23,6 +23,8 @@ section{
 
 
 
+
+
 .bgPulse span:nth-child(1) {
   top:50%;
   left:70%;
@@ -52,13 +54,13 @@ section{
 @keyframes ripple {
   0% {
     transform: scale(0.1);
-  border-color: #006400;
+  border-color: #ffffff;
     border-style: double;
     opacity: 0.7;
   }
   100% {
     transform: scale(10);
-  border-color: #00FF00;
+  border-color: #000000;
     border-style: double;
     opacity: 0;
   }
@@ -93,17 +95,14 @@ section{
 /* End of ripple animations  */
 
 
-/* Appearing images animation (not used for the moment)*/
 
 
-.backgroundimages span{
+.backgroundimages  span{
   /* background-image: url("../Assets/cat.png"); */
   height: 70px;
   width: 70px;
   background: white;
   border-radius: 80px;
-  /* background-repeat:no-repeat; */
-  /* background-size: 75px 75px; */
   z-index: -2;
 }
 
@@ -162,7 +161,22 @@ section{
   left:27%;
   animation: animate 14s linear infinite;
 }
-@keyframes animate {
+.backgroundimages span:nth-child(11) {
+  top:80%;
+  left:77%;
+  animation: animate 6s linear infinite;
+}
+.backgroundimages span:nth-child(12) {
+  top:10%;
+  left:87%;
+  animation: animate 24s linear infinite;
+}
+.backgroundimages span:nth-child(13) {
+  top:50%;
+  left:57%;
+  animation: animate 18s linear infinite;
+}
+@keyframes animate { 
 0%{
   transform: scale(0) translateY(0) ;
 }
@@ -296,6 +310,10 @@ section{
   .nonresponsive {
     display: none;
   }
+
+  .backgroundimages{
+    height: 100;
+  }
 }
 
 
@@ -319,4 +337,11 @@ section{
 
 
 
+
 /* End of animations for text in each item */
+
+
+/* Staggered effect */
+
+
+

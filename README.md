@@ -8,7 +8,13 @@ New updates to make
 
 - [ ] Need to add ripples effect to make entrance to new backgroudns
  - [X] Create ripple sample
- - [ ] Work in background template
+ - [X] Work in background template
+ - [X] Work in start animation, for now creating circles, need to alternate in spans for transparent circles. Then i need center all of them in a animation
+ - [ ] Work on mobile
+   - [ ] Got titles, need to work in start animation and move titles down.
+ - [ ] Work in additional animations for start 
+
+
 
 
 

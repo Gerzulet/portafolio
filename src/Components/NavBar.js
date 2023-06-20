@@ -1,3 +1,4 @@
+import './navbar.css'
 import { BsGithub, BsLinkedin, BsWhatsapp } from 'react-icons/bs'
 import frenchFlag from '../Assets/frenchFlag.png'
 import spanishFlag from '../Assets/spanishFlag.png'
@@ -31,7 +32,7 @@ export default function NavBar() {
 
   return (
     <>
-      <nav className="w-full  h-auto relative flex justify-around">
+      <nav id="navbar" className="w-full  h-auto relative flex justify-around">
         <ul className='flex  invisible  md:visible '>
           <li className='m-4'><a target="_blank" rel="noreferrer" href="https://github.com/Gerzulet"><BsGithub color='white' size='40' /></a></li>
           <li className='m-4'><a target="_blank" rel="noreferrer" href="https://linkedin.com/in/gzulet"><BsLinkedin color='white' size='40' /></a></li>

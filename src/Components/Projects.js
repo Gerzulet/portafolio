@@ -55,14 +55,14 @@ export default function Projects() {
                     key={index}
                   />
 
-                  <h1 class="absolute top-[60%] text-red-600 left-14">{slide.responsive}</h1>
+                  <h1 className="absolute top-[60%] text-red-600 left-14">{slide.responsive}</h1>
 
-                  <div class="text-white absolute flex flex-col bottom-[85%] right-[93%]">
+                  <div className="text-white absolute flex flex-col bottom-[85%] right-[93%]">
                     {slide.responsive === false ?
                       <img className='h-12' src={nonResponsiveIcon} alt="non Resposive" /> : <img className='h-12' src={responsiveIcon} alt="responsive" />
                     }
                   </div>
-                  <div class="text-white absolute flex flex-col bottom-[30%] left-[93%]">
+                  <div className="text-white absolute flex flex-col bottom-[30%] left-[93%]">
                     {slide.technologies.map((el, index) => {
                       return (
                         <img className='h-12 my-2  ' key={index} src={el} alt="tecnologia" />

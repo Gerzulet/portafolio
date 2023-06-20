@@ -56,7 +56,6 @@ export default function Main() {
 
     const spans = document.querySelectorAll(".bgPulse span")
     spans.forEach(el => {
-      console.log(el)
       el.classList.add("pulse")
     })
 
@@ -66,7 +65,6 @@ export default function Main() {
     }, 4000);
 
   }
-
 
 
   useEffect(() => {
@@ -85,7 +83,6 @@ export default function Main() {
     setTimeout(() => {
       document.querySelector('#projectsResponsive').dispatchEvent(new Event('click'))
     }, 3000);
-
 
   }, [language])
 
@@ -186,8 +183,7 @@ export default function Main() {
     <>
       <main id="particles-js" className="main md:h-[44rem] w-full  relative">
         <div id="menu" className="w-[90%] md:w-[35%] h-[40rem] absolute left-5 md:left-4 top-5 ">
-          <h1 className='text-white md:invisible hidden'>Profile Pic</h1>
-          <ul className="flex flex-col items-center mt-40 relative text-white text-4xl">
+          <ul id="menutitles" className="flex flex-col items-center mt-40 relative text-white text-4xl">
             <li data-value={language.about} onClick={() => cambiarDisplay(<About responsiveStyle='' />)} id="about" className='my-4 invisible md:visible cursor-pointer'  >
               &nbsp;{language.about}&nbsp;
             </li>
@@ -228,9 +224,10 @@ export default function Main() {
             <span className=''></span>
             <span className=''></span>
             <span className=''></span>
+            <span className=''></span>
+            <span className=''></span>
+            <span className=''></span>
           </div>
-
-
 
         </section>
       </main>
