@@ -2,7 +2,7 @@
 
 ![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/Gerzulet/portafolio)
 ![Netlify](https://img.shields.io/netlify/8c1c9402-a08d-401c-9907-04b1e830bb11)
-![Website](https://img.shields.io/website)
+
 
 
 Hola!, me llamo German, soy un desarrollador Fullstack.
@@ -29,6 +29,11 @@ This portfolio showcases the various technologies I have learned over time.
 
 Este portfolio fue creado React, asistido con tecnologias como AnimeJS para la animacion de entrada.
 This project was created with React, assisted with technologies like AnimeJS for the entrance animation.
+
+## Deploy 
+
+https://zuletportfolio.netlify.app/
+
 
 ## Conocimientos / Knowledge
 
